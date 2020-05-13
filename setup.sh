@@ -11,6 +11,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew install git
 # Telegram Desktop 
 brew cask install telegram-desktop
+# WhatsApp Desktop 
+brew cask install whatsapp
 # Sublime Text
 brew cask install sublime-text
 # iTerm2
@@ -36,7 +38,6 @@ mas install 1274495053 # Microsoft To Do
 mas install 1399901452 # SleepSoon
 mas install 1502839586 # HandMirror
 mas install 441258766 # Magnet
-mas install 1147396723 # WhatsApp
 
 # Copy Dot files
 rm -f ~/.zshrc
