@@ -1,8 +1,6 @@
-alias neos_create_admin="flow user:create admin admin Admin User --roles=Administrator"
-
-alias neos_new_project="composer create-project neos/neos-base-distribution "
-alias nnp="neos_new_project"
-
+#
+# Neos CMS aliases
+#
 neos_kill_temp() {
     echo -n "Deleting neos temporary folder..."
     rm -rf ./Data/Temporary
@@ -15,22 +13,31 @@ neos_kill_logs() {
     echo "done!"
 }
 
+alias nkl="neos_kill_logs"
+alias nkt="neos_kill_temp"
+alias nka="nkt && nkl && ./flow flow:cache:flush --force"
+alias neos_create_admin="flow user:create admin admin Admin User --roles=Administrator"
+alias neos_new_project="composer create-project neos/neos-base-distribution "
+alias nnp="neos_new_project"
+
+#
+# Other dev aliases
+#
+alias docker-restart="docker-compose down && docker-compose up -d"
+alias crnu="composer require --no-update"
+alias pa="php artisan"
+alias code-here="code -r ."
+
+#
+# Small helper
+#
 cmd-history() {
     history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
 }
 
-alias nkl="neos_kill_logs"
-alias nkt="neos_kill_temp"
-alias nka="nkt && nkl && ./flow flow:cache:flush --force"
-alias crnu="composer require --no-update"
-alias code-here="code -r ."
 alias refresh="hash -r"
 alias unixts="php -r 'echo time();' | pbcopy"
-alias docker-restart="docker-compose down && docker-compose up -d"
 alias rndstr="openssl rand -hex"
 alias nano="/usr/local/bin/nano"
 alias ssh="ssh -o ServerAliveInterval=10"
-alias npbuild="npm run build"
-alias npwatch="npm run watch"
 alias ssh-key-copy="cat ~/.ssh/id_rsa.pub | pbcopy"
-alias pa="php artisan"
