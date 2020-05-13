@@ -3,6 +3,7 @@
 # Install HomeBrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 source ~/.bashrc
+brew update
 # Install ZSH & Oh my ZSH
 brew install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -41,3 +42,10 @@ mas install 1147396723 # WhatsApp
 rm ~/.zshrc
 cp ./.zshrc ~/.zshrc
 cp ./.aliases ~/.aliases
+
+# GIT Setup
+bash ./setup-git.sh
+
+# Instal laravel/valet
+composer global require laravel/valet
+valet install

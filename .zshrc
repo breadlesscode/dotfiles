@@ -3,7 +3,7 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$PATH
 export PATH="/usr/local/sbin:$PATH:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kuhn/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export LDFLAGS="-L/usr/local/opt/libffi/lib"
 export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 
