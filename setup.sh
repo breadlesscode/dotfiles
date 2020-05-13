@@ -39,9 +39,11 @@ mas install 441258766 # Magnet
 mas install 1147396723 # WhatsApp
 
 # Copy Dot files
-rm ~/.zshrc
-cp ./.zshrc ~/.zshrc
-cp ./.aliases ~/.aliases
+rm -f ~/.zshrc
+cp ./.zshrc ~/
+cp ./.aliases ~/
+rm -f ~/.gitignore
+cp ./.gitignore ~/
 
 # GIT Setup
 bash ./setup-git.sh

@@ -1,0 +1,13 @@
+# IDEs & Editors
+.idea
+.vscode
+# Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
