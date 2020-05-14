@@ -2,23 +2,42 @@
 # Neos CMS aliases
 #
 neos_kill_temp() {
-    echo -n "Deleting neos temporary folder..."
-    rm -rf ./Data/Temporary
-    echo "done!"
+    echo -n "Deleting Neos temporary folder..."
+    if [ -f "./flow" ]; then
+        rm -rf ./Data/Temporary
+        echo "\033[0;32mdone\033[0m!"
+    else
+        echo "\033[0;31mfailed\033[0m!"
+    fi
 }
 
 neos_kill_logs() {
-    echo -n "Deleting neos logs folder..."
-    rm -rf ./Data/Logs
-    echo "done!"
+    echo -n "Deleting Neos logs folder..."
+    if [ -f "./flow" ]; then
+        rm -rf ./Data/Logs
+        echo "\033[0;32done\033[0m!"
+    else
+        echo "\033[0;31mfailed\033[0m!"
+    fi
 }
 
+neos_kill_cache() {
+    echo -n "Deleting Neos cache..."
+    if [ -f "./flow" ]; then
+        ./flow flow:cache:flush --force &> /dev/null
+        echo "\033[0;32done\033[0m!"
+    else
+        echo "\033[0;31mfailed\033[0m!"
+    fi
+}
+
+alias neos_create_admin="flow user:create admin admin Admin User --roles=Administrator"
+alias neos_create_project="composer create-project neos/neos-base-distribution "
 alias nkl="neos_kill_logs"
 alias nkt="neos_kill_temp"
-alias nka="nkt && nkl && ./flow flow:cache:flush --force"
-alias neos_create_admin="flow user:create admin admin Admin User --roles=Administrator"
-alias neos_new_project="composer create-project neos/neos-base-distribution "
-alias nnp="neos_new_project"
+alias nkc="neos_kill_cache"
+alias nka="nkt && nkl && nkc"
+alias nnp="neos_create_project"
 
 #
 # Other dev aliases
@@ -32,7 +51,7 @@ alias code-here="code -r ."
 # Small helper
 #
 cmd-history() {
-    history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
+    history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n15
 }
 
 alias refresh="hash -r"
