@@ -1,36 +1,6 @@
 #
 # Neos CMS aliases
 #
-neos_kill_temp() {
-    echo -n "Deleting Neos temporary folder..."
-    if [ -f "./flow" ]; then
-        rm -rf ./Data/Temporary
-        echo "\033[0;32mdone\033[0m!"
-    else
-        echo "\033[0;31mfailed\033[0m!"
-    fi
-}
-
-neos_kill_logs() {
-    echo -n "Deleting Neos logs folder..."
-    if [ -f "./flow" ]; then
-        rm -rf ./Data/Logs
-        echo "\033[0;32done\033[0m!"
-    else
-        echo "\033[0;31mfailed\033[0m!"
-    fi
-}
-
-neos_kill_cache() {
-    echo -n "Deleting Neos cache..."
-    if [ -f "./flow" ]; then
-        ./flow flow:cache:flush --force &> /dev/null
-        echo "\033[0;32done\033[0m!"
-    else
-        echo "\033[0;31mfailed\033[0m!"
-    fi
-}
-
 alias neos_create_admin="flow user:create admin admin Admin User --roles=Administrator"
 alias neos_create_project="composer create-project neos/neos-base-distribution "
 alias nkl="neos_kill_logs"
