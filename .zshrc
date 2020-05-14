@@ -63,17 +63,12 @@ ZSH_THEME="oxide"
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-z git flow yarn npm composer brew zsh-autosuggestions osx jira)
+plugins=(zsh-z git flow composer brew zsh-autosuggestions osx)
 source $ZSH/oh-my-zsh.sh
 
+#
 # User configuration
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#
 
 # import functions & aliases
 source $HOME/.functions
@@ -82,5 +77,3 @@ source $HOME/.aliases
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # NEOS Env
 export FLOW_CONTEXT=Development/Valet
-# 
-export JIRA_URL="XX"
