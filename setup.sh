@@ -21,6 +21,9 @@ brew cask install iterm2
 brew cask install bitwarden
 # Postman HTTP Client
 brew cask install postman
+# Install Lazy Software :)
+brew install lazygit
+brew install lazydocker
 # Visual Studio Code
 brew cask install visual-studio-code
 # PHP
