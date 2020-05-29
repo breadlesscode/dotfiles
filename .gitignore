@@ -1,6 +1,10 @@
 # IDEs & Editors
 .idea
 .vscode
+
+# PHP
+.php_cs.cache
+
 # Node
 npm-debug.log*
 yarn-debug.log*
