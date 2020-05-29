@@ -37,3 +37,13 @@ neos_kill_cache() {
 cmd-history() {
     history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10
 }
+
+function db {
+    if [ "$1" = "refresh" ]; then
+        mysql -uroot -proot -e "drop database $2; create database $2"
+    elif [ "$1" = "create" ]; then
+        mysql -uroot -proot -e "create database $2"
+    elif [ "$1" = "drop" ]; then
+        mysql -uroot -proot -e "drop database $2"
+    fi
+}
