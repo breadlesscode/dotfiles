@@ -77,3 +77,6 @@ source $HOME/.aliases
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # NEOS Env
 export FLOW_CONTEXT=Development/Valet
+# Composer
+export COMPOSER_MEMORY_LIMIT=-1
+
