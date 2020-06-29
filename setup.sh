@@ -26,6 +26,8 @@ brew cask install iterm2
 brew cask install bitwarden
 # Postman HTTP Client
 brew cask install postman
+# System Monitor App
+brew cask install stats
 # Install Lazy Software :)
 brew install lazygit
 brew install lazydocker
