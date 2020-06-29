@@ -1,5 +1,10 @@
 #!/bin/bash
-
+# Small setup helper
+function echoHeadline {
+    echo '################'
+    echo $1
+    echo '################'
+}
 # Install HomeBrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 source ~/.bashrc
@@ -27,7 +32,7 @@ brew install lazydocker
 # Visual Studio Code
 brew cask install visual-studio-code
 # PHP
-brew install php
+zsh ./setup-php.sh
 # PHP Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
@@ -50,7 +55,7 @@ rm -f ~/.gitignore
 cp ./.gitignore ~/
 
 # GIT Setup
-bash ./setup-git.sh
+zsh ./setup-git.sh
 
 # Instal laravel/valet
 composer global require laravel/valet

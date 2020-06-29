@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echoHeadline "Setup GIT config "
+
 git config --global user.email $MY_EMAIL;
 git config --global user.name $MY_NAME;
 
