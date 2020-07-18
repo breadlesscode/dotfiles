@@ -10,3 +10,5 @@ git config --global core.excludesfile $HOME/.gitignore;
 
 git config --global difftool.default-difftool.cmd "code --wait --diff \$LOCAL \$REMOTE";
 git config --global diff.tool "default-difftool";
+
+git config --global push.default current
