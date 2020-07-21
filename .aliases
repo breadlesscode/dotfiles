@@ -3,6 +3,7 @@
 #
 alias neos_create_admin="flow user:create admin admin Admin User --roles=Administrator"
 alias neos_create_project="composer create-project neos/neos-base-distribution "
+alias noex="neos_open_exeption"
 alias nkl="neos_kill_logs"
 alias nkt="neos_kill_temp"
 alias nkc="neos_kill_cache"

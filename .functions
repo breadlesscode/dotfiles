@@ -31,6 +31,10 @@ neos_kill_cache() {
     fi
 }
 
+function neos_open_exeption {
+    subl ./Data/Logs/Exceptions/${1}.log
+}
+
 #
 # small helper
 #
