@@ -63,7 +63,7 @@ ZSH_THEME="oxide"
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-z git flow composer brew zsh-autosuggestions osx)
+plugins=(zsh-z git flow composer brew zsh-autosuggestions osx laravel)
 source $ZSH/oh-my-zsh.sh
 
 #
