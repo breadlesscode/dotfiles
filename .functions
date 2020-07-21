@@ -32,7 +32,7 @@ neos_kill_cache() {
 }
 
 function neos_open_exeption {
-    subl ./Data/Logs/Exceptions/${1}.log
+    subl ./Data/Logs/Exceptions/${1}.txt
 }
 
 #
