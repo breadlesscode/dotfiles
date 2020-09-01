@@ -33,6 +33,8 @@ brew install lazygit
 brew install lazydocker
 # Visual Studio Code
 brew cask install visual-studio-code
+# Install quick look extensions
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package quicklookase qlvideo
 # PHP
 zsh ./setup-php.sh
 # PHP Composer
