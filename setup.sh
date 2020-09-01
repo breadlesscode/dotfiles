@@ -26,6 +26,8 @@ brew cask install iterm2
 brew cask install bitwarden
 # Postman HTTP Client
 brew cask install postman
+# jq is a lightwight json parser
+brew install jq
 # System Monitor App
 brew cask install stats
 # Install Lazy Software :)
