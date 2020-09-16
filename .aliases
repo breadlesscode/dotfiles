@@ -17,6 +17,7 @@ alias docker-restart="docker-compose down && docker-compose up -d"
 alias crnu="composer require --no-update"
 alias pa="php artisan"
 alias code-here="code -r ."
+alias storm-here="pstorm ."
 
 #
 # Small helper
