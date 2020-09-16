@@ -14,4 +14,8 @@ yarn-error.log*
 .DS_Store
 
 # Windows
-Thumbs.db
+Thumbs.d
+
+# Neos CMS
+Configuration/Development/Valet
+DistributionPackages/*/Configuration/Development/Valet
